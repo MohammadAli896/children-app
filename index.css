@@ -1,0 +1,532 @@
+*{box-sizing: border-box;font-family: monospace, sans-serif, Arial;}
+
+html{scroll-behavior: smooth;}
+
+:root{
+--primaryColor:#0277bd;
+--primaryDarkColor:#004c8c;
+--primaryLightColor:#58a5f0;
+--primaryVeryLight:#e6ffff;
+--secondaryColor:#b2ff59;
+--secondaryDarkColor:#7ecb20;
+--secondaryLightColor:#e7ff8c;
+}
+
+.containerview{
+  width: 360px;
+}
+
+.maincontainer{
+  background-color: var(--primaryVeryLight);
+  width: 95%;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* HERO TITLE IMAGE*/
+.heroContainer{
+ height: 100px;
+ background-image:linear-gradient(to top right, rgba(200,0,0,0.5),
+ rgba(0,0,200,0.5)), url("Images/1.jpg");
+ background-size: 100% 100%;
+ position: relative;
+}
+
+.heroText{
+width: 80%;
+height: 80%;
+ position: absolute;
+ text-align: center;
+ left: 10%;
+ top: 10%;
+ background-color: var(--primaryLightColor);
+ opacity: 0.9;
+}
+
+.heroText h2{
+  color: var(--secondaryDarkColor);
+  font-size: 1.8em;
+  text-shadow: 2px 2px 2px green;
+  font-family: monospace;
+  text-decoration: underline;
+}
+
+.heroText em{
+  font-size: 0.5em;
+  color: black;
+  font-weight: bolder;
+}
+
+.box1{float: left;
+width: 50%;
+position: absolute;
+top: -10px;}
+
+.box2{
+  float: left;
+  width: 40%;
+  position: absolute;
+  left: 140px;
+  top: 10px;
+}
+
+/*Slideshow*/
+
+
+.slideshowcontainer{
+  border: solid var(--secondaryDarkColor) 2px;
+  height: 175px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slide-wrapper{
+  height: 100%;
+  width: 500%;
+  animation: slideshow 12s infinite;
+}
+
+.imgslide{
+  float: left;
+  height: 100%;
+  width: 20%;
+}
+
+@keyframes slideshow {
+  0%{margin-left: 0%}
+  8%{margin-left: 0%}
+  20%{margin-left: -100%}
+  28%{margin-left: -100%}
+  40%{margin-left: -200%}
+  48%{margin-left: -200%}
+  60%{margin-left: -300%}
+  68%{margin-left: -300%}
+  80%{margin-left: -400%}
+  88%{margin-left: -400%}
+}
+
+.slide-wrapper img{
+  width: 100%;
+  height: 100%;
+}
+
+/*NAV*/
+
+.nav_horizontal{
+ background-color: var(--primaryColor);
+ height: auto;
+ width: 100%;
+ padding: 5px;
+ margin-top: 20px;
+}
+
+.nav_horizontal a{
+  background-color: var(--primaryLightColor);
+ color: var(--secondaryColor);
+ padding: 10px;
+ text-decoration: none;
+ display:inline-block;
+ width: 32%;
+ text-align: center;
+ margin-left: 10%;
+}
+
+.nav_horizontal a:hover{
+ background-color: var(--primaryDarkColor);
+ color: var(--secondaryLightColor);
+ text-decoration: underline;
+}
+
+/*CSS ANIMATION ON IMAGE*/
+
+.bgImage{
+  margin-top: 20px;
+  width: 100%;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+}
+.bgImage img{
+  width: 100%;
+  height: 100%;
+}
+
+.Animal1{
+  width:60px;
+  height:50px;
+  position: absolute;
+  bottom: 115px;
+  animation-name: slide;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-fill-mode:forwards;
+  animation-direction: normal;
+}
+
+@keyframes slide{
+ from {transform: translateX(75px);}
+ to {transform: translateX(232px);}
+}
+
+.Animal2{
+  width:40px;
+  height:60px;
+  position: absolute;
+  top: 55px;
+  left: 250px;
+  animation-name: slide1;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-fill-mode:forwards;
+  animation-direction:alternate;
+  animation-timing-function: ease;
+}
+
+@keyframes slide1{
+ from {transform: translateY(240px);}
+ to {transform: translateY(85px);}
+}
+
+.Animal3{
+  width:40px;
+  height:30px;
+  position: absolute;
+  top: 55px;
+  left: 55px;
+  animation-name: slide2;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-fill-mode:forwards;
+  animation-direction:alternate;
+  animation-timing-function: ease;
+}
+
+@keyframes slide2{
+ from {transform: translateY(240px);}
+ to {transform: translateY(60px);}
+}
+
+.Letter1{
+  width: 80px;
+  height: 50px;
+  position: absolute;
+  top: 50px;
+  left: 20px;
+  animation-name: disappear;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+
+.Letter2{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 25px;
+  left: 140px;
+  animation-name: disappear;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+
+.Letter3{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50px;
+  left: 250px;
+  animation-name: disappear;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes disappear{
+ 0% {opacity:0.0;}
+ 60% {opacity:0.0;}
+ 70% {opacity: 0.4;}
+ 80% {opacity: 0.8;}
+ 85% {opacity:1.0;}
+}
+
+
+/*MODAL WINDOW*/
+
+.modalWindow{
+  width: 380px;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: rgba(231, 255, 140, 0.8);
+  opacity: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.modalWindow:target{
+  opacity: 1;
+  pointer-events: auto;
+  transition: ease-in 0.3s;
+}
+
+.msgText{
+  width: 90%;
+  height: 90%;
+  position: relative;
+  background-image: linear-gradient(to top right, var(--primaryVeryLight), var(--primaryLightColor));
+  margin-top: 8%;
+  margin-left: 5%;
+}
+
+.msgText h2{
+  font-size: 0.9em;
+  padding: 10px 20px;
+  background-color: var(--secondaryDarkColor);
+  color: var(--primaryDarkColor);
+}
+
+.modal-closeX{
+  float: right;
+  color:var(--primaryDarkColor);
+  display: inline-block;
+  text-decoration: none;
+}
+
+.msgText h3{
+padding: 20px;
+text-align: center;
+font-size: 0.9em;
+}
+
+
+.modal-close {
+margin-top: 30px;
+color:var(--primaryDarkColor);
+background-color:var(--secondaryDarkColor);
+padding: 12px 50px 12px 50px;
+text-align: center;
+text-decoration: none;
+float: right;
+margin-right: 30%;
+border-radius: 12px;
+}
+
+.modal-close1 {
+color:var(--primaryDarkColor);
+background-color:var(--secondaryDarkColor);
+padding: 12px 50px 12px 50px;
+text-align: center;
+text-decoration: none;
+float: right;
+margin-right: 30%;
+border-radius: 12px;
+}
+
+/*FLIP CARDS*/
+
+.FLIPCARDS{
+  overflow-y: scroll;
+  height: 290px;
+}
+
+.flip-card1{
+ background-color: transparent;
+ width: 100px;
+ height: 100px;
+ margin: 20px;
+ float: left;
+ margin-left: 35px;
+}
+
+.flip-card-inner1{
+ position: relative;
+ width: 100%;
+ height: 100%;
+ text-align: center;
+ transition: transform 0.6s;
+ transform-style: preserve-3d;
+}
+
+.flip-card-front1{
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ background-color:var(--primaryDarkColor);
+}
+
+.flip-card1 img{
+ width:100%;
+ height:100%;
+}
+
+.flip-card-back1{
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ background-color: var(--secondaryDarkColor);
+ color: var(--primaryDarkColor);
+ transform: rotateY(180deg);
+}
+
+.flip-card-back1 h4{
+font-size: 1.0em;
+text-align: center;
+margin-top: 40px;
+}
+
+.flip-card1:hover .flip-card-inner1{
+ transform: rotateY(180deg);
+}
+
+/*Collapsible*/
+
+.collapsiblecontainer{
+ width: 80%;
+ margin-left: auto;
+ margin-right: auto;
+ margin-top: 30px;
+ margin-bottom: 30px;
+ padding: 0em 1em;
+ overflow-y: scroll;
+ height: 400px;
+}
+.collapsiblecontainer img{
+ width: 100%;
+ height: 100%;
+}
+.Letter{
+  height: 50px;
+  width: 50px;
+  margin-left: 35%;
+}
+.audio{
+  width: 85%;
+  height: 30px;
+  margin-left: 16px;
+}
+
+
+.tab {
+ position: relative;
+ width: 100%;
+ color: white;
+ overflow: hidden;
+ margin-bottom: 1px;
+ margin-top: 10px;
+ border-radius: 5%;
+}
+.tab input {
+ position: absolute;
+ opacity: 0;
+}
+.tab label {
+ position: relative;
+ display: block;
+ padding-left: 1em;
+ background-color: var(--secondaryDarkColor);
+ font-weight: bold;
+line-height: 3;
+}
+.tab-content {
+ max-height: 0px;
+ overflow-y: scroll;
+ background-color: var(--primaryDarkColor);
+ color: black;
+ transition: max-height 0.5s;
+ padding-top: 5px;
+}
+.tab-content p {
+ margin: 1em;
+}
+
+.tab input:checked ~ .tab-content{
+ max-height: 350px;
+}
+
+.tab label::after {
+ position: absolute;
+ right: 0;
+ top: 0;
+ display: block;
+ width: 3em;
+ height: 3em;
+ line-height: 3;
+ text-align: center;
+ transition: all .30s;
+}
+
+.tab input[type=checkbox] + label::after {
+  content: "\21D3";
+  color: var(--primaryDarkColor);
+}
+.tab input[type=checkbox]:checked + label::after {
+  transform: rotate(360deg);
+ content:"\21D1";
+}
+
+
+
+/*CONTACT US*/
+
+.text{
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 15px;
+  text-align: center;
+}
+
+.icon{
+  float: right;
+  width: 14%;
+  margin-left: 3%;
+}
+.email a{
+  float: right;
+  width: 75%;
+  padding: 4%;
+  margin-left: 5%;
+}
+.info{
+  width: 95%;
+  height: 50px;
+}
+.img4{
+width: 100%;
+height: 100%;
+}
+.paragraph{
+  padding-top: 1%;
+}
+
+.icons{
+  padding-left: 25%;
+}
+
+.containercontact{
+  width: 95%;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  background-color: var(--primaryLightColor);
+  color: var(--secondaryColor);
+}
+
+.containercontact h3{
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.Follow{
+  background-color: var(--primaryColor);
+}
+
+.End{
+  background-color: var(--primaryDarkColor);
+  height: 201px;
+  margin-top: -9px;
+}
